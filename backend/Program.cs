@@ -1,4 +1,14 @@
+using backend.Data;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
+// Datenbankverbinung
+builder.Services.AddDbContext<DinoContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    )
+);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
