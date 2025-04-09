@@ -10,6 +10,17 @@ builder.Services.AddDbContext<DinoContext>(options =>
     )
 );
 
+// 1) CORS hinzufügen
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowReactLocalhost5173", policy =>
+    {
+        policy.WithOrigins("http://localhost:5173")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
@@ -27,6 +38,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+// 2) CORS-Policy aktivieren
+app.UseCors("AllowReactLocalhost5173");
 
 app.UseAuthorization();
 

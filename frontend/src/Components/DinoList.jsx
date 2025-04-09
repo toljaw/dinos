@@ -5,7 +5,7 @@ function DinoList() {
 
     useEffect(() => {
         // API-Route ggf. anpassen
-        fetch('/api/dino')
+        fetch('http://localhost:5027/api/dino')
             .then((response) => response.json())
             .then((data) => setDinos(data))
             .catch((error) => console.error('Fehler beim Laden:', error));
