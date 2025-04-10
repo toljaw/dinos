@@ -5,6 +5,8 @@ namespace backend.Dtos;
 
 public class DinoDto
 {
+    [Key]
+    public Guid Id { get; set; }
     
     [Required]
     [MaxLength(100)]

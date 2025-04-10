@@ -25,6 +25,7 @@ namespace backend.Controllers
             var dinos = _context.Dinos
                 .Select(c => new DinoDto
                 {
+                    Id = c.Id,
                     Name = c.Name,
                     ErstesAufkommen = c.ErstesAufkommen,
                     KoerperLaenge = c.KoerperLaenge,
@@ -47,6 +48,7 @@ namespace backend.Controllers
             // In Dto transformieren
             var dto = new DinoDto
             {
+                Id = dinoEntity.Id,
                 Name = dinoEntity.Name,
                 ErstesAufkommen = dinoEntity.ErstesAufkommen,
                 KoerperLaenge = dinoEntity.KoerperLaenge,
