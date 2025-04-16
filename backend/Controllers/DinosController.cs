@@ -66,6 +66,7 @@ namespace backend.Controllers
         [HttpPost]
         public ActionResult<DinoDto> CreateDino([FromBody] CreateDinoDto newDino)
         {
+           
             // Entity anlegen und aus DTO befüllen
             var dinoEntity = new Dino
             {

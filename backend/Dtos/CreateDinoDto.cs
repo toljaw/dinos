@@ -10,7 +10,8 @@ public class CreateDinoDto
     public string Name { get; set; }
     
     [Required]
-    public int ErstesAufkommen { get; set; }
+    [Column(TypeName = "decimal(9,2)")]
+    public decimal ErstesAufkommen { get; set; }
     
     [Required]
     [Column(TypeName = "decimal(9,2)")]

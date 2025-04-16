@@ -13,6 +13,7 @@ public class DinoDto
     public string Name { get; set; }
     
     [Required]
+    [Column(TypeName = "decimal(9,2)")]
     public decimal ErstesAufkommen { get; set; }
     
     [Required]

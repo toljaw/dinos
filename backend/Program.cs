@@ -1,4 +1,3 @@
-using backend.Classes;
 using backend.Data;
 using Microsoft.EntityFrameworkCore;
 
@@ -49,7 +48,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-// Dino trex = new Dino("Tyrannosaurus Rex", 75, 14, 5.5m, 1.5m, 7000);
-// trex.ShowStats();
+
 
 app.Run();
