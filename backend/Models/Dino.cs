@@ -13,7 +13,8 @@ public class Dino
     public string Name { get; set; }
     
     [Required]
-    public int ErstesAufkommen { get; set; }
+    [Column(TypeName = "decimal(9,2)")]
+    public decimal ErstesAufkommen { get; set; }
     
     [Required]
     [Column(TypeName = "decimal(9,2)")]
@@ -30,4 +31,8 @@ public class Dino
     [Required]
     [Column(TypeName = "decimal(9,2)")]
     public decimal Gewicht { get; set; }
+    
+    [Required]
+    [MaxLength(100)]
+    public string Spiel { get; set; }
 }

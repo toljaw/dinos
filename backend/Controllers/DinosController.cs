@@ -31,7 +31,8 @@ namespace backend.Controllers
                     KoerperLaenge = c.KoerperLaenge,
                     KoerperHoehe = c.KoerperHoehe,
                     SchaedelLaenge = c.SchaedelLaenge,
-                    Gewicht = c.Gewicht
+                    Gewicht = c.Gewicht,
+                    Spiel = c.Spiel
                 })
                 .ToList();
             return Ok(dinos);
@@ -54,7 +55,8 @@ namespace backend.Controllers
                 KoerperLaenge = dinoEntity.KoerperLaenge,
                 KoerperHoehe = dinoEntity.KoerperHoehe,
                 SchaedelLaenge = dinoEntity.SchaedelLaenge,
-                Gewicht = dinoEntity.Gewicht
+                Gewicht = dinoEntity.Gewicht,
+                Spiel = dinoEntity.Spiel
             };
 
             return Ok(dto);
@@ -73,7 +75,8 @@ namespace backend.Controllers
                 KoerperLaenge = newDino.KoerperLaenge,
                 KoerperHoehe = newDino.KoerperHoehe,
                 SchaedelLaenge = newDino.SchaedelLaenge,
-                Gewicht = newDino.Gewicht
+                Gewicht = newDino.Gewicht,
+                Spiel = newDino.Spiel
             };
 
             // Speichern
@@ -88,7 +91,8 @@ namespace backend.Controllers
                 KoerperLaenge = dinoEntity.KoerperLaenge,
                 KoerperHoehe = dinoEntity.KoerperHoehe,
                 SchaedelLaenge = dinoEntity.SchaedelLaenge,
-                Gewicht = dinoEntity.Gewicht
+                Gewicht = dinoEntity.Gewicht,
+                Spiel = dinoEntity.Spiel
             };
 
             return CreatedAtAction(nameof(GetDinoById),

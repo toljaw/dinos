@@ -40,6 +40,7 @@ const DinoList = () => {
                     <th>Körper Höhe</th>
                     <th>Schädel Länge</th>
                     <th>Gewicht</th>
+                    <th>Spiel</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -51,6 +52,7 @@ const DinoList = () => {
                         <td>{dino.koerperHoehe}</td>
                         <td>{dino.schaedelLaenge}</td>
                         <td>{dino.gewicht}</td>
+                        <td>{dino.spiel}</td>
                     </tr>
                 ))}
                 </tbody>

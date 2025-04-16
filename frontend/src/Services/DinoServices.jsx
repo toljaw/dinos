@@ -14,3 +14,26 @@ export const fetchDinos = async () => {
         throw error;
     }
 };
+
+// Funktion zum Erstellen eines neuen Dinosauriers
+export const createDino = async (newDino) => {
+    try {
+        const response = await fetch(API_URL, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(newDino),
+        });
+
+        if (!response.ok) {
+            throw new Error('Fehler beim Erstellen des Dinosauriers');
+        }
+
+        const data = await response.json();
+        return data; // Gibt den erstellten Dino zurück
+    } catch (error) {
+        console.error('Fehler:', error);
+        throw new Error(`Create Error: ${error.message}`);
+    }
+};

@@ -12,8 +12,8 @@ using backend.Data;
 namespace backend.Migrations
 {
     [DbContext(typeof(DinoContext))]
-    [Migration("20250409090910_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250416091934_InitialMigration")]
+    partial class InitialMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,8 +31,8 @@ namespace backend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("ErstesAufkommen")
-                        .HasColumnType("int");
+                    b.Property<decimal>("ErstesAufkommen")
+                        .HasColumnType("decimal(9,2)");
 
                     b.Property<decimal>("Gewicht")
                         .HasColumnType("decimal(9,2)");
@@ -50,6 +50,11 @@ namespace backend.Migrations
 
                     b.Property<decimal>("SchaedelLaenge")
                         .HasColumnType("decimal(9,2)");
+
+                    b.Property<string>("Spiel")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("Id");
 

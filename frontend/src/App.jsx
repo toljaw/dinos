@@ -1,6 +1,7 @@
 import {useEffect, useState} from 'react'
 import './App.css'
 import DinoList from "./Components/DinoList.jsx";
+import CreateDinoForm from "./Components/CreateDinoForm.jsx";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -18,6 +19,7 @@ function App() {
         <h2>{message}</h2>
         <h1>Dinos</h1>
         <DinoList/>
+        <CreateDinoForm/>
 
 
     </>

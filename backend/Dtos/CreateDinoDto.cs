@@ -28,4 +28,8 @@ public class CreateDinoDto
     [Column(TypeName = "decimal(9,2)")]
     public decimal Gewicht { get; set; }
     
+    [Required]
+    [MaxLength(100)]
+    public string Spiel { get; set; }
+    
 }
